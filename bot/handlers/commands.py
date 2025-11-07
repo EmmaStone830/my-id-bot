@@ -10,18 +10,18 @@ router.message.filter(~F.forward_from & ~F.forward_from_chat)
 
 
 @router.message(F.chat.type == ChatType.PRIVATE, CommandStart())
-async def cmd_start(message: Message, l10n: FluentLocalization):
+async def cmd_start(message: Message):
     """
     /start command handler for private chats
-    :param message: Telegram message with "/start" command
-    :param l10n: Fluent localization object
     """
-    builder = InlineKeyboardBuilder()
-    builder.button(text=l10n.format_value("cmd-start-inline-try-here"), switch_inline_query_current_chat="")
-    builder.button(text=l10n.format_value("cmd-start-inline-try-other"), switch_inline_query="")
-    await message.answer(
-        l10n.format_value("cmd-start", args={"id": html.code(message.chat.id)}),
-        reply_markup=builder.adjust(1).as_markup()
+    await message.answer_photo(
+        photo="https://i.rj1.dev/FQpal.png",
+        caption=(
+            "✨ **ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍʏ ɪᴅ ʙᴏᴛ** ✨\n\n"
+            "🔹 ᴜsᴇ /id ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ɪᴅ\n\n"
+            "⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ʀᴀᴢᴇ](https://t.me/TheRazeX)"
+        ),
+        parse_mode="Markdown"
     )
 
 
