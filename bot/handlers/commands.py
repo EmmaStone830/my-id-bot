@@ -17,9 +17,9 @@ async def cmd_start(message: Message):
     await message.answer_photo(
         photo="https://i.rj1.dev/FQpal.png",
         caption=(
-            "✨ **ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍʏ ɪᴅ ʙᴏᴛ** ✨\n\n"
+            "<blockquote>✨ **›› Aʀᴀ Aʀᴀ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍʏ ɪᴅ ʙᴏᴛ** ✨\n\n"
             "🔹 ᴜsᴇ /id ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ɪᴅ\n\n"
-            "⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ʀᴀᴢᴇ](https://t.me/TheRazeX)"
+            "⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ʀᴀᴢᴇ](https://t.me/TheRazeX) | [ʙᴏᴛsᴋɪɴɢᴅᴏᴍs](https://t.me/botskingdoms) </blockquote>"
         ),
         parse_mode="Markdown"
     )
